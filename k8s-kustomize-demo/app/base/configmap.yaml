@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: login-app-config
+data:
+  APP_NAME: "login-service"
+  APP_ENV: "development"
+  APP_PORT: "3000"
+
+  DB_HOST: "appuser"
+  DB_PORT: "3306"
+  DB_NAME: "login_db"

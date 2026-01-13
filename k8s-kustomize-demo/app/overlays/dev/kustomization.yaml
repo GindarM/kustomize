@@ -1,0 +1,27 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namespace: demo-dev 
+
+patches:
+  - path: patch-replicas.yaml
+    target:
+      kind: Deployment
+      name: login-app
+
+images:
+  - name: login-app-local
+    newName: login-app-local
+    newTag: "1.0"
+
+configMapGenerator:
+  - name: login-app-config
+    behavior: merge
+    literals:
+      - APP_ENV=dev
+      - LOG_LEVEL=debug
+
+namePrefix: dev-
