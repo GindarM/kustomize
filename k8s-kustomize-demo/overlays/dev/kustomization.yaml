@@ -8,6 +8,6 @@ patches:
   - path: patch-replicas.yaml
     target:
       kind: Deployment
-      name: myapp  # the name of the deployment you want to patch
+      name: myapp-nginx  # the name of the deployment you want to patch
 
 namePrefix: dev-
