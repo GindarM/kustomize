@@ -3,9 +3,4 @@ kind: Kustomization
 
 resources:
   - deployment.yaml
-  - networkpolicy.yaml
-  - pdb.yaml
-  - serviceaccount.yaml
   - svc.yaml
-  - tls-secret.yaml
-  - ingress.yaml
